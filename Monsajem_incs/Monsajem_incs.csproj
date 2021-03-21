@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{839C6ED5-3B67-482B-9D60-6CCF40707860}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monsajem_incs</RootNamespace>
+    <AssemblyName>Monsajem_incs</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicFrameWorks\Calculator\Calc.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayDb\ArrayDatabase.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayDb\Maker.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\ArrayExtentions.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\ArrayReturns.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Array_Base.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Array_Base_Actions.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Array_Dynamic.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Array_Sorted.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\DynamicSize\Array_.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\DynamicSize\SortedArray.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Hyper\Array.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Hyper\BaseArray.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\ArrayExtentions\Hyper\SortedArray.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\0_Base.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Atributes.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\CDN\Async.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Delete.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Enumerator.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Extentions.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\FromTo.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\GetItem.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Insert.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\KeyInfo.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Keys.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Network\Async.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Network\Network.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Network\Sync.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\PositionOf.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\Relation.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\RelationInfo.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\Relation_1_1.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\Relation_1_X.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\Relation_AutoFill_X_1.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\Relation_AutoFill_X_X.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Relation\Relation_X_X.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\Update.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\UpdateAble.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\UpdateOrInsert.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\KeyValueDatabase\UpgridModel.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\PartOfTable\0_Base.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\PartOfTable\Accept.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\PartOfTable\Ignore.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\DatabaseInterface\Z_MoveToOtherProject\Class1.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\FileDatabase\DirectoryFilesTable.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\FileDatabase\DirectoryTable.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\KeyValueDB\DirBased.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\KeyValueDB\Table.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\KeyValueDB\WebStorageBased.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization_New\Serialization\Classes.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization_New\Serialization\Serialization.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization\Serialization\Classes.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization\Serialization\Serialization.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization\DeepCopy.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization\WrapObjects.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\Serialization\Shared.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\StreamColection\StreamCollection\Base.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\StreamColection\StreamCollection\Delete.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\StreamColection\StreamCollection\GetItem.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\StreamColection\StreamCollection\Info.cs" />
+    <Compile Include="BasicFrameWorks\Datawork\StreamColection\StreamCollection\Insert.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\AseemblyReader\Globals.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\AseemblyReader\ILInstruction.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\AseemblyReader\MethodBodyReader.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\AsyncActions.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\ClassHelpers\ClassHelpers.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\DelegateFactory.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\DelegatesExtentions.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\TypeBuilder\Field.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\TypeBuilder\Method.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\TypeBuilder\Property.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\TypeBuilder\0_Main.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\FieldControler.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\Locker.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\SafeResource.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\DynamicMethod.cs" />
+    <Compile Include="BasicFrameWorks\DynamicAssembly\TypeControler.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Enumerable.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\OprationTypes.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Service\Oprations.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Service\Oprations_Async.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Service\RequestClient.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Service\ResposerServer.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Service\Service.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Socket\ClientSocket.cs" />
+    <Compile Include="BasicFrameWorks\Network\NetworkService\Socket\ServerSocket.cs" />
+    <Compile Include="BasicFrameWorks\Network\TcpService\ClientSocket.cs" />
+    <Compile Include="BasicFrameWorks\Network\TcpService\RequestClient.cs" />
+    <Compile Include="BasicFrameWorks\Network\TcpService\ResposerServer.cs" />
+    <Compile Include="BasicFrameWorks\Network\TcpService\ServerSocket.cs" />
+    <Compile Include="BasicFrameWorks\Network\Virtual\Oprations.cs" />
+    <Compile Include="BasicFrameWorks\Network\WebService\WebService.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\ByteOrder.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\CloseEventArgs.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\CloseStatusCode.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\CompressionMethod.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\ErrorEventArgs.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Ext.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Fin.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\HttpBase.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\HttpRequest.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\HttpResponse.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\LogData.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Logger.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\LogLevel.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Mask.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\MessageEventArgs.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\AuthenticationBase.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\AuthenticationChallenge.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\AuthenticationResponse.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\AuthenticationSchemes.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\Chunk.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\ChunkedRequestStream.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\ChunkStream.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\ClientSslConfiguration.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\Cookie.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\CookieCollection.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\CookieException.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\EndPointListener.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\EndPointManager.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpBasicIdentity.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpConnection.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpDigestIdentity.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpHeaderInfo.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpHeaderType.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListener.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerAsyncResult.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerContext.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerException.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerPrefix.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerPrefixCollection.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerRequest.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpListenerResponse.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpRequestHeader.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpResponseHeader.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpStatusCode.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpStreamAsyncResult.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpUtility.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\HttpVersion.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\InputChunkState.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\InputState.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\LineState.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\NetworkCredential.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\QueryStringCollection.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\ReadBufferState.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\RequestStream.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\ResponseStream.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\ServerSslConfiguration.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\WebHeaderCollection.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\WebSockets\HttpListenerWebSocketContext.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\WebSockets\TcpListenerWebSocketContext.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Net\WebSockets\WebSocketContext.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Opcode.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\PayloadData.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Rsv.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\HttpRequestEventArgs.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\HttpServer.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\IWebSocketSession.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\ServerState.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\WebSocketBehavior.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\WebSocketServer.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\WebSocketServiceHost.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\WebSocketServiceHost`1.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\WebSocketServiceManager.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\Server\WebSocketSessionManager.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\WebSocket.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\WebSocketException.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\WebSocketFrame.cs" />
+    <Compile Include="BasicFrameWorks\Network\websocket-sharp\WebSocketState.cs" />
+    <Compile Include="BasicFrameWorks\Patterns\Function.cs" />
+    <Compile Include="BasicFrameWorks\SafeAccess\base.cs" />
+    <Compile Include="BasicFrameWorks\States\State.cs" />
+    <Compile Include="BasicFrameWorks\Tester\Tester.cs" />
+    <Compile Include="BasicFrameWorks\Threading\Task.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

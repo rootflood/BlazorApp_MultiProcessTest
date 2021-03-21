@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MonsajemDomHelpers\WebWorker.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MonsajemDomHelpers\WebWorker.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Monsajem_incs\Monsajem_incs.csproj" />
+    <ProjectReference Include="..\WASM_NetCore\WASM_NetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resorces\Monsajem.cs">
+      <DependentUpon>Monsajem.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resorces\Monsajem.tt">
+      <LastGenOutput>Monsajem.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

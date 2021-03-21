@@ -1,0 +1,74 @@
+@using System;
+@using WebAssembly.Browser.MonsajemDomHelpers;
+@using System.Threading.Tasks;
+@using Monsajem_Incs.TimeingTester;
+@using BlazorWorker.BackgroundServiceFactory;
+@using BlazorWorker.Core;
+@inject BlazorWorker.Core.IWorkerFactory workerFactory
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@code
+{
+
+    public class CLSTRD
+    {
+        public byte[] GetSR()
+        {
+            return new byte[1024 * 1024 * 10];
+        }
+    }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        Console.WriteLine("//////////////////////////////////");
+        {
+            //// monsajem sample
+            WebProcess Worker = null;
+            Console.WriteLine("monsajem WebWorker");
+            Console.WriteLine("getting Ready....");
+            Console.WriteLine("Ready " + (await Timing.run(async () =>
+            {
+                Worker = new WebProcess();
+                await Worker.IsReady;
+            })).ToString());
+
+            Console.WriteLine("Runing....");
+            Console.WriteLine("execution time " + (await Timing.run(async () =>
+            {
+                (await Worker.Run(() => new byte[1024 * 1024 * 10])).ToString();
+            })).ToString());
+        }
+
+        Console.WriteLine("//////////////////////////////////");
+        {
+            //// Tewr/BlazorWorker sample        
+            IWorker worker = null;
+            BlazorWorker.WorkerBackgroundService.IWorkerBackgroundService<CLSTRD>
+                service = null;
+            Console.WriteLine("Tewr BlazorWorker");
+            Console.WriteLine("getting Ready....");
+            Console.WriteLine("Ready " + (await Timing.run(async () =>
+            {
+                worker = await workerFactory.CreateAsync();
+                service = await worker.CreateBackgroundServiceAsync<CLSTRD>((op) =>
+                {
+                    op.AddAssemblies(
+                            "BlazorApp_MultiProcessTest.dll",
+                            "Microsoft.AspNetCore.Components.dll",
+                            "BlazorWorker.Core.dll");
+                });
+            })).ToString());
+
+            Console.WriteLine("Runing....");
+            Console.WriteLine("execution time " + (await Timing.run(async () =>
+            {
+                (await service.RunAsync(s => s.GetSR())).ToString();
+            })).ToString());
+        }
+
+    }
+}
